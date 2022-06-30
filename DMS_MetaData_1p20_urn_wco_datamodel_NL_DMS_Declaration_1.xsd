@@ -1,0 +1,2124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:DMS_Declaration_1p20="urn:wco:datamodel:NL:DMS_Declaration:1"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:ds="urn:wco:datamodel:NL:DMS_Patterns_DS:1"
+    targetNamespace="urn:wco:datamodel:NL:DMS_Declaration:1"
+    elementFormDefault="qualified">
+  <xs:import namespace="urn:wco:datamodel:NL:DMS_Patterns_DS:1" schemaLocation="DMS_MetaData_1p20_urn_wco_datamodel_NL_DMS_Patterns_DS_1.xsd"/>
+  <xs:element name="Declaration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Declaration">
+          <xs:annotation>
+            <xs:documentation xml:lang="EN">
+              <WCOID>42A</WCOID>
+            </xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AcceptanceDateTime" type="ds:DeclarationAcceptanceDateTimeType" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation xml:lang="EN">
+                    <WCOID>023</WCOID>
+                    <WCOName>Goods declaration acceptance date (Customs), coded</WCOName>
+                  </xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="FunctionCode" type="ds:DeclarationFunctionCodeType">
+                <xs:annotation>
+                  <xs:documentation xml:lang="EN">
+                    <WCOID>017</WCOID>
+                    <WCOName>Message function, coded</WCOName>
+                  </xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="FunctionalReferenceID" type="ds:DeclarationFunctionalReferenceIDType">
+                <xs:annotation>
+                  <xs:documentation xml:lang="EN">
+                    <WCOID>D026</WCOID>
+                    <WCOName>Functional reference number</WCOName>
+                  </xs:documentation>
+                  <xs:documentation>
+                    <SADBox>A</SADBox>
+                  </xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="TypeCode" type="ds:DeclarationTypeCodeType">
+                <xs:annotation>
+                  <xs:documentation xml:lang="EN">
+                    <WCOID>D013</WCOID>
+                    <WCOName>Declaration name, coded</WCOName>
+                    <SADBox>1</SADBox>
+                  </xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="DeclarationOfficeID" type="ds:DeclarationDeclarationOfficeIDType">
+                <xs:annotation>
+                  <xs:documentation xml:lang="EN">
+                    <WCOID>065</WCOID>
+                    <WCOName>Office of declaration, coded</WCOName>
+                    <SADBox>A</SADBox>
+                  </xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="GoodsItemQuantity" type="ds:DeclarationGoodsItemQuantityType">
+                <xs:annotation>
+                  <xs:documentation xml:lang="EN">
+                    <WCOID>228</WCOID>
+                    <WCOName>Total number of items</WCOName>
+                    <SADBox>5</SADBox>
+                  </xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="AdditionalInformation" minOccurs="0" maxOccurs="99">
+                <xs:annotation>
+                  <xs:documentation xml:lang="EN">
+                    <WCOID>03A</WCOID>
+                  </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="StatementCode" type="ds:AdditionalInformationStatementCodeType">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>226</WCOID>
+                          <WCOName>Additional statement code</WCOName>
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="StatementDescription" type="ds:AdditionalInformationStatementDescriptionTextType">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>225</WCOID>
+                          <WCOName>Additional statement text</WCOName>
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="StatementTypeCode" type="ds:AdditionalInformationStatementTypeCodeType">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>369</WCOID>
+                          <WCOName>Additional statement type</WCOName>
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Agent" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation xml:lang="EN">
+                    <WCOID>05A</WCOID>
+                    <SADBox>14</SADBox>
+                  </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Name" type="ds:AgentNameTextType" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>R003</WCOID>
+                          <WCOName>Agent - name</WCOName>
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="ID" type="ds:AgentIdentificationIDType">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>R004</WCOID>
+                          <WCOName>Agent, coded</WCOName>
+                          <SADBox>14</SADBox>
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="FunctionCode" type="ds:AgentFunctionCodeType">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>102</WCOID>
+                          <WCOName>Agent status, coded</WCOName>
+                          <SADBox>14</SADBox>
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="Address" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>04A</WCOID>
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="CityName" type="ds:AddressCityNameTextType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>241</WCOID>
+                                <WCOName>City name</WCOName>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="CountryCode" type="ds:AddressCountryCodeType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>242</WCOID>
+                                <WCOName>Country, coded</WCOName>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Line" type="ds:AddressLineTextType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>239</WCOID>
+                                <WCOName>Street and number/P.O. Box</WCOName>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="PostcodeID" type="ds:AddressPostcodeIDType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>245</WCOID>
+                                <WCOName>Postcode identification</WCOName>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Declarant">
+                <xs:annotation>
+                  <xs:documentation xml:lang="EN">
+                    <WCOID>57B</WCOID>
+                    <WCOName>Declarant</WCOName>
+                    <SADBox>14</SADBox>
+                  </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Name" type="ds:DeclarantNameTextType" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>R124</WCOID>
+                          <WCOName>Declarant name</WCOName>
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="ID" type="ds:DeclarantIdentificationIDType" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>R123</WCOID>
+                          <WCOName>Declarant, coded</WCOName>
+                          <SADBox>14</SADBox>
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="Address" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>04A</WCOID>
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="CityName" type="ds:AddressCityNameTextType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>241</WCOID>
+                                <WCOName>City name</WCOName>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="CountryCode" type="ds:AddressCountryCodeType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>242</WCOID>
+                                <WCOName>Country, coded</WCOName>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Line" type="ds:AddressLineTextType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>239</WCOID>
+                                <WCOName>Street and number/P.O. Box</WCOName>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="PostcodeID" type="ds:AddressPostcodeIDType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>245</WCOID>
+                                <WCOName>Postcode identification</WCOName>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Exporter" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation xml:lang="EN">
+                    <WCOID>57A</WCOID>
+                    <SADBox>2</SADBox>
+                  </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Name" type="ds:ExporterNameTextType" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>R031</WCOID>
+                          <WCOName>Exporter - name</WCOName>
+                          <SADBox>2</SADBox>
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="ID" type="ds:ExporterIdentificationIDType" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>R032</WCOID>
+                          <WCOName>Exporter, coded</WCOName>
+                          <SADBox>2</SADBox>
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="Address" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>04A</WCOID>
+                          <SADBox>2</SADBox>
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="CityName" type="ds:AddressCityNameTextType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>241</WCOID>
+                                <WCOName>City name</WCOName>
+                                <SADBox>2</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="CountryCode" type="ds:AddressCountryCodeType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>242</WCOID>
+                                <WCOName>Country, coded</WCOName>
+                                <SADBox>2</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Line" type="ds:AddressLineTextType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>239</WCOID>
+                                <WCOName>Street and number/P.O. Box</WCOName>
+                                <SADBox>2</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="PostcodeID" type="ds:AddressPostcodeIDType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>245</WCOID>
+                                <WCOName>Postcode identification</WCOName>
+                                <SADBox>2</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="GoodsShipment" maxOccurs="999">
+                <xs:annotation>
+                  <xs:documentation xml:lang="EN">
+                    <WCOID>67A</WCOID>
+                  </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ExportationCountryCode" type="ds:GoodsShipmentExportationCountryCodeType" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>062</WCOID>
+                          <WCOName>Country of exportation, coded</WCOName>
+                          <SADBox>15a</SADBox>
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="SequenceNumeric" type="ds:GoodsShipmentSequenceNumericType">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>006</WCOID>
+                          <WCOName>Sequence number</WCOName>
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="TransactionNatureCode" type="ds:GoodsShipmentTransactionNatureCodeType" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>103</WCOID>
+                          <WCOName>Nature of transaction, coded</WCOName>
+                          <SADBox>24</SADBox>
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="Buyer" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>16A</WCOID>
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Name" type="ds:BuyerNameTextType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>R009</WCOID>
+                                <WCOName>Buyer - name</WCOName>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="ID" type="ds:BuyerIdentificationIDType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>R010</WCOID>
+                                <WCOName>Buyer, coded</WCOName>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Address" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>04A</WCOID>
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="CityName" type="ds:AddressCityNameTextType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>241</WCOID>
+                                      <WCOName>City name</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="CountryCode" type="ds:AddressCountryCodeType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>242</WCOID>
+                                      <WCOName>Country, coded</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="Line" type="ds:AddressLineTextType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>239</WCOID>
+                                      <WCOName>Street and number/P.O. Box</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="PostcodeID" type="ds:AddressPostcodeIDType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>245</WCOID>
+                                      <WCOName>Postcode identification</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Consignee" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>27A</WCOID>
+                          <SADBox>8</SADBox>
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Name" type="ds:ConsigneeNameTextType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <SADBox>8</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="ID" type="ds:ConsigneeIdentificationIDType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>R015</WCOID>
+                                <WCOName>Consignee, coded</WCOName>
+                                <SADBox>8</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Address" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>04A</WCOID>
+                                <SADBox>8</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="CityName" type="ds:AddressCityNameTextType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>241</WCOID>
+                                      <WCOName>City name</WCOName>
+                                      <SADBox>8</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="CountryCode" type="ds:AddressCountryCodeType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>242</WCOID>
+                                      <WCOName>Country, coded</WCOName>
+                                      <SADBox>8</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="Line" type="ds:AddressLineTextType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>239</WCOID>
+                                      <WCOName>Street and number/P.O. Box</WCOName>
+                                      <SADBox>8</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="PostcodeID" type="ds:AddressPostcodeIDType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>245</WCOID>
+                                      <WCOName>Postcode identification</WCOName>
+                                      <SADBox>8</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Consignment" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>28A</WCOID>
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ArrivalTransportMeans" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>10A</WCOID>
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Name" type="ds:ArrivalTransportMeansNameTextType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>T001</WCOID>
+                                      <WCOName>Identification of means of transport at arrival</WCOName>
+                                      <SADBox>18</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="TypeCode" type="ds:ArrivalTransportMeansTypeCodeType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>T008</WCOID>
+                                      <WCOName>Mode/type of means of transport at arrival, coded</WCOName>
+                                      <SADBox>26</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="BorderTransportMeans" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>15A</WCOID>
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Name" type="ds:BorderTransportMeansNameTextType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>T005</WCOID>
+                                      <WCOName>Identification of means of transport crossing the border</WCOName>
+                                    </xs:documentation>
+                                    <xs:documentation>
+                                      <SADBox>21</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="TypeCode" type="ds:BorderTransportMeansTypeCodeType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>T010</WCOID>
+                                      <WCOName>Mode/type of means of transport crossing the border, coded</WCOName>
+                                      <SADBox>25</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="RegistrationNationalityCode" type="ds:BorderTransportMeansRegistrationNationalityCodeType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>T014</WCOID>
+                                      <WCOName>Nationality of means of transport crossing the border, coded</WCOName>
+                                      <SADBox>21</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="DepartureTransportMeans" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>46A</WCOID>
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Name" type="ds:DepartureTransportMeansNameTextType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>T003</WCOID>
+                                      <WCOName>Identification of means of transport at departure</WCOName>
+                                    </xs:documentation>
+                                    <xs:documentation>
+                                      <SADBox>18</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="TypeCode" type="ds:DepartureTransportMeansTypeCodeType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>T009</WCOID>
+                                      <WCOName>Mode/type of means of transport at departure, coded</WCOName>
+                                    </xs:documentation>
+                                    <xs:documentation>
+                                      <SADBox>26</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Freight" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>62A</WCOID>
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="PaymentMethodCode" type="ds:FreightPaymentMethodCodeType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>098</WCOID>
+                                      <WCOName>Transport charges method of payment, coded</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="GoodsLocation" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>64A</WCOID>
+                              </xs:documentation>
+                              <xs:documentation>
+                                <SADBox>30</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Name" type="ds:GoodsLocationNameTextType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>L016</WCOID>
+                                      <WCOName>Location of goods</WCOName>
+                                    </xs:documentation>
+                                    <xs:documentation>
+                                      <SADBox>30</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Itinerary" minOccurs="0" maxOccurs="99">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>81A</WCOID>
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="SequenceNumeric" type="ds:ItinerarySequenceNumericType">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>006</WCOID>
+                                      <WCOName>Sequence number</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="RoutingCountryCode" type="ds:ItineraryRoutingCountryCodeType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>064</WCOID>
+                                      <WCOName>Country(ies ) of routing, coded</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="TransportEquipment" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>31B</WCOID>
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Seal" maxOccurs="99">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>44B</WCOID>
+                                    </xs:documentation>
+                                    <xs:documentation>
+                                      <SADBox>D</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="SequenceNumeric" type="ds:SealSequenceNumericType">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="EN">
+                                            <WCOID>006</WCOID>
+                                            <WCOName>Sequence number</WCOName>
+                                          </xs:documentation>
+                                          <xs:documentation>
+                                            <SADBox>D</SADBox>
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="ID" type="ds:SealIdentificationIDType">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="EN">
+                                            <WCOID>165</WCOID>
+                                            <WCOName>Seal number</WCOName>
+                                          </xs:documentation>
+                                          <xs:documentation>
+                                            <SADBox>D</SADBox>
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Consignor" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>30A</WCOID>
+                        </xs:documentation>
+                        <xs:documentation>
+                          <SADBox>2</SADBox>
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Name" type="ds:ConsignorNameTextType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>R020</WCOID>
+                                <WCOName>Consignor - name</WCOName>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="ID" type="ds:ConsignorIdentificationIDType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>R021</WCOID>
+                                <WCOName>Consignor, coded</WCOName>
+                              </xs:documentation>
+                              <xs:documentation>
+                                <SADBox>2</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Address" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>04A</WCOID>
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="CityName" type="ds:AddressCityNameTextType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>241</WCOID>
+                                      <WCOName>City name</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="CountryCode" type="ds:AddressCountryCodeType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>242</WCOID>
+                                      <WCOName>Country, coded</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="Line" type="ds:AddressLineTextType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>239</WCOID>
+                                      <WCOName>Street and number/P.O. Box</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="PostcodeID" type="ds:AddressPostcodeIDType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>245</WCOID>
+                                      <WCOName>Postcode identification</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="DeliveryDestination" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>44A</WCOID>
+                          <SADBox>17a</SADBox>
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Address" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>04A</WCOID>
+                                <SADBox>17a</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="CountryCode" type="ds:AddressCountryCodeType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>242</WCOID>
+                                      <WCOName>Country, coded</WCOName>
+                                      <SADBox>17a</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="DomesticDutyTaxParty" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>55B</WCOID>
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ID" type="ds:DomesticDutyTaxPartyIdentificationIDType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>R119</WCOID>
+                                <WCOName>DomesticDutyTaxParty, coded</WCOName>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="EntryOffice" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>51A</WCOID>
+                          <SADBox>29</SADBox>
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ID" type="ds:EntryOfficeIdentificationCodeType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>G004</WCOID>
+                                <WCOName>Office of entry, coded</WCOName>
+                                <SADBox>29</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="ExitOffice" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>56A</WCOID>
+                          <SADBox>29</SADBox>
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ID" type="ds:ExitOfficeIdentificationCodeType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>G005</WCOID>
+                                <WCOName>Office of exit, coded</WCOName>
+                                <SADBox>29</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Exporter" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>57A</WCOID>
+                          <SADBox>2</SADBox>
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Name" type="ds:ExporterNameTextType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>R031</WCOID>
+                                <WCOName>Exporter - name</WCOName>
+                                <SADBox>2</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="ID" type="ds:ExporterIdentificationIDType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>R032</WCOID>
+                                <WCOName>Exporter, coded</WCOName>
+                                <SADBox>2</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Address" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>04A</WCOID>
+                                <SADBox>2</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="CityName" type="ds:AddressCityNameTextType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>241</WCOID>
+                                      <WCOName>City name</WCOName>
+                                      <SADBox>2</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="CountryCode" type="ds:AddressCountryCodeType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>242</WCOID>
+                                      <WCOName>Country, coded</WCOName>
+                                      <SADBox>2</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="Line" type="ds:AddressLineTextType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>239</WCOID>
+                                      <WCOName>Street and number/P.O. Box</WCOName>
+                                      <SADBox>2</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="PostcodeID" type="ds:AddressPostcodeIDType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>245</WCOID>
+                                      <WCOName>Postcode identification</WCOName>
+                                      <SADBox>2</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="GovernmentAgencyGoodsItem" minOccurs="0" maxOccurs="999">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>68A</WCOID>
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="CustomsValueAmount" type="ds:GovernmentAgencyGoodsItemCustomsValueAmountType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>108</WCOID>
+                                <WCOName>Customs value</WCOName>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="SequenceNumeric" type="ds:GovernmentAgencyGoodsItemSequenceNumericType">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>006</WCOID>
+                                <WCOName>Sequence number</WCOName>
+                                <SADBox>32</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="StatisticalValueAmount" type="ds:GovernmentAgencyGoodsItemStatisticalValueAmountType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>114</WCOID>
+                                <WCOName>Statistical value</WCOName>
+                                <SADBox>46</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="AdditionalDocument" minOccurs="0" maxOccurs="99">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>02A</WCOID>
+                                <SADBox>44</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ID" type="ds:AdditionalDocumentIdentificationIDType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>D005</WCOID>
+                                      <WCOName>Additional document reference number</WCOName>
+                                      <SADBox>44</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="TypeCode" type="ds:AdditionalDocumentTypeCodeType">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>D006</WCOID>
+                                      <WCOName>Additional document type, coded</WCOName>
+                                      <SADBox>44</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="CategoryCode" type="ds:AdditionalDocumentCategoryCodeType">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>D031</WCOID>
+                                      <WCOName>Additional document category, coded</WCOName>
+                                      <SADBox>44</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="AmountAmount" type="ds:AdditionalDocumentAmountAmountType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>263</WCOID>
+                                      <WCOName>Additional document amount</WCOName>
+                                      <SADBox>44</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="QuantityQuantity" type="ds:AdditionalDocumentQuantityQuantityType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>313</WCOID>
+                                      <WCOName>Additional document quantity</WCOName>
+                                      <SADBox>44</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="AdditionalInformation" minOccurs="0" maxOccurs="99">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>03A</WCOID>
+                                <SADBox>44</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="StatementCode" type="ds:AdditionalInformationStatementCodeType">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>226</WCOID>
+                                      <WCOName>Additional statement code</WCOName>
+                                      <SADBox>44</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="StatementDescription" type="ds:AdditionalInformationStatementDescriptionTextType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>225</WCOID>
+                                      <WCOName>Additional statement text</WCOName>
+                                      <SADBox>44</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="StatementTypeCode" type="ds:AdditionalInformationStatementTypeCodeType">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>369</WCOID>
+                                      <WCOName>Additional statement type</WCOName>
+                                      <SADBox>44</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Commodity">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>23A</WCOID>
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="SequenceNumeric" type="ds:CommoditySequenceNumericType">
+                                  <xs:annotation>
+                                    <xs:documentation>
+                                      <WCOName>Sequence number</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="Description" type="ds:CommodityDescriptionTextType">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>137</WCOID>
+                                      <WCOName>Description of goods</WCOName>
+                                      <SADBox>31</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="ValueAmount" type="ds:CommodityValueAmountType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>306</WCOID>
+                                      <WCOName>Commodity value</WCOName>
+                                      <SADBox>42</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="Classification" minOccurs="0" maxOccurs="99">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>21A</WCOID>
+                                    </xs:documentation>
+                                    <xs:documentation>
+                                      <SADBox>33</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="ID" type="ds:ClassificationIdentificationIDType" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="EN">
+                                            <WCOID>145</WCOID>
+                                            <WCOName>Commodity Classification</WCOName>
+                                          </xs:documentation>
+                                          <xs:documentation>
+                                            <SADBox>33</SADBox>
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="IdentificationTypeCode" type="ds:ClassificationIdentificationTypeCodeType">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="EN">
+                                            <WCOID>337</WCOID>
+                                            <WCOName>Commodity Classification Type</WCOName>
+                                          </xs:documentation>
+                                          <xs:documentation>
+                                            <SADBox>33</SADBox>
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="DutyTaxFee" minOccurs="0" maxOccurs="99">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>50A</WCOID>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="AdValoremTaxBaseAmount" type="ds:DutyTaxFeeAdValoremTaxBaseAmountType" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="EN">
+                                            <WCOID>116</WCOID>
+                                            <WCOName>Duty/tax/fee assessment basis in value</WCOName>
+                                            <SADBox>47</SADBox>
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="DeductAmount" type="ds:DutyTaxFeeDeductAmountType" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="EN">
+                                            <WCOID>111</WCOID>
+                                            <WCOName>Duty/tax/fee reduced assessed</WCOName>
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="DutyRegimeCode" type="ds:DutyTaxFeeDutyRegimeCodeType" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="EN">
+                                            <WCOID>164</WCOID>
+                                            <WCOName>Type of duty regime, coded</WCOName>
+                                            <SADBox>36</SADBox>
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="SpecificTaxBaseQuantity" type="ds:DutyTaxFeeSpecificTaxBaseQuantityType" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="EN">
+                                            <WCOID>129</WCOID>
+                                            <WCOName>Duty/tax/fee assessment basis in quantity</WCOName>
+                                            <SADBox>47</SADBox>
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="TypeCode" type="ds:DutyTaxFeeTypeCodeType" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="EN">
+                                            <WCOID>113</WCOID>
+                                            <WCOName>Duty/tax/fee type, coded</WCOName>
+                                            <SADBox>47</SADBox>
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="QuotaOrderID" type="ds:DutyTaxFeeQuotaOrderIDType" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="EN">
+                                            <WCOID>401</WCOID>
+                                            <WCOName>Quota identifier</WCOName>
+                                          </xs:documentation>
+                                          <xs:documentation>
+                                            <SADBox>39</SADBox>
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="Payment" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="EN">
+                                            <WCOID>94A</WCOID>
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="MethodCode" type="ds:PaymentMethodCodeType">
+                                              <xs:annotation>
+                                                <xs:documentation xml:lang="EN">
+                                                  <WCOID>107</WCOID>
+                                                  <WCOName>Duty/tax payment method, coded</WCOName>
+                                                  <SADBox>47</SADBox>
+                                                </xs:documentation>
+                                              </xs:annotation>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="TransportEquipment" minOccurs="0" maxOccurs="99">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>31B</WCOID>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="SequenceNumeric" type="ds:TransportEquipmentSequenceNumericType" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="EN">
+                                            <WCOID>006</WCOID>
+                                            <WCOName>Sequence number</WCOName>
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="ID" type="ds:TransportEquipmentIdentificationIDType" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="EN">
+                                            <WCOID>159</WCOID>
+                                            <WCOName>Equipment identification number</WCOName>
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="GoodsMeasure">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>65A</WCOID>
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="GrossMassMeasure" type="ds:GoodsMeasureGrossMassMeasureType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>126</WCOID>
+                                      <WCOName>Gross weight item level</WCOName>
+                                      <SADBox>35</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="NetNetWeightMeasure" type="ds:GoodsMeasureNetNetWeightMeasureType">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>128</WCOID>
+                                      <WCOName>Net net weight</WCOName>
+                                      <SADBox>38</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="TariffQuantity" type="ds:GoodsMeasureTariffQuantityType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>130</WCOID>
+                                      <WCOName>Tariff quantity/ Supplementary quantity</WCOName>
+                                      <SADBox>41</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="GovernmentProcedure" maxOccurs="2">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>70A</WCOID>
+                              </xs:documentation>
+                              <xs:documentation>
+                                <SADBox>37</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="CurrentCode" type="ds:GovernmentProcedureCurrentCodeType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>166</WCOID>
+                                      <WCOName>Government procedure, coded</WCOName>
+                                      <SADBox>37A</SADBox>
+                                      <SADBox>37B</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="PreviousCode" type="ds:GovernmentProcedurePreviousCodeType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>161</WCOID>
+                                      <WCOName>Previous government procedure</WCOName>
+                                      <SADBox>37A</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Manufacturer" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>86A</WCOID>
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Name" type="ds:ManufacturerNameTextType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>R042</WCOID>
+                                      <WCOName>Manufacturer</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="ID" type="ds:ManufacturerIdentificationIDType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>R043</WCOID>
+                                      <WCOName>Manufacturer, coded</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="Address" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>04A</WCOID>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="CityName" type="ds:AddressCityNameTextType" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="EN">
+                                            <WCOID>241</WCOID>
+                                            <WCOName>City name</WCOName>
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="CountryCode" type="ds:AddressCountryCodeType" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="EN">
+                                            <WCOID>242</WCOID>
+                                            <WCOName>Country, coded</WCOName>
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="Line" type="ds:AddressLineTextType" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="EN">
+                                            <WCOID>239</WCOID>
+                                            <WCOName>Street and number/P.O. Box</WCOName>
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="PostcodeID" type="ds:AddressPostcodeIDType" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="EN">
+                                            <WCOID>245</WCOID>
+                                            <WCOName>Postcode identification</WCOName>
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Origin" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>92A</WCOID>
+                              </xs:documentation>
+                              <xs:documentation>
+                                <SADBox>34a</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="CountryCode" type="ds:OriginCountryCodeType">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>063</WCOID>
+                                      <WCOName>Country of origin, coded</WCOName>
+                                      <SADBox>34a</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Packaging" maxOccurs="99">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>93A</WCOID>
+                              </xs:documentation>
+                              <xs:documentation>
+                                <SADBox>31</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="SequenceNumeric" type="ds:PackagingSequenceNumericType">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>006</WCOID>
+                                      <WCOName>Sequence number</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="MarksNumbersID" type="ds:PackagingMarksNumbersIDType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>142</WCOID>
+                                      <WCOName>Shipping marks</WCOName>
+                                      <SADBox>31</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="QuantityQuantity" type="ds:PackagingQuantityQuantityType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>144</WCOID>
+                                      <WCOName>Number of packages</WCOName>
+                                      <SADBox>31</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="TypeCode" type="ds:PackagingTypeCodeType">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>141</WCOID>
+                                      <WCOName>Type of packages identification, coded</WCOName>
+                                      <SADBox>31</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="PreviousDocument" minOccurs="0" maxOccurs="9">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>99A</WCOID>
+                              </xs:documentation>
+                              <xs:documentation>
+                                <SADBox>40</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ID" type="ds:PreviousDocumentIdentificationIDType">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>D018</WCOID>
+                                      <WCOName>Previous document number</WCOName>
+                                      <SADBox>40</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="TypeCode" type="ds:PreviousDocumentTypeCodeType">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>D019</WCOID>
+                                      <WCOName>Previous document type, coded</WCOName>
+                                      <SADBox>40</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="LineNumeric" type="ds:PreviousDocumentLineNumericType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>171</WCOID>
+                                      <WCOName>Declaration line number previously recorded</WCOName>
+                                      <SADBox>40</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="RefundRecipientParty" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>59B</WCOID>
+                                <WCOName>RefundRecipientParty</WCOName>
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Name" type="ds:RefundRecipientPartyNameTextType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>R127</WCOID>
+                                      <WCOName>Refund Recipient Party name</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="ID" type="ds:RefundRecipientPartyIdentificationIDType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>R128</WCOID>
+                                      <WCOName>Refund Recipient Party, coded</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="Address" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>04A</WCOID>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="CityName" type="ds:AddressCityNameTextType" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="EN">
+                                            <WCOID>241</WCOID>
+                                            <WCOName>City name</WCOName>
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="CountryCode" type="ds:AddressCountryCodeType" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="EN">
+                                            <WCOID>242</WCOID>
+                                            <WCOName>Country, coded</WCOName>
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="Line" type="ds:AddressLineTextType" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="EN">
+                                            <WCOID>239</WCOID>
+                                            <WCOName>Street and number/P.O. Box</WCOName>
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="PostcodeID" type="ds:AddressPostcodeIDType" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="EN">
+                                            <WCOID>245</WCOID>
+                                            <WCOName>Postcode identification</WCOName>
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="ValuationAdjustment" minOccurs="0" maxOccurs="99">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>39B</WCOID>
+                                <SADBox>45</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="AdditionCode" type="ds:ValuationAdjustmentAdditionCodeType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>188</WCOID>
+                                      <WCOName>Valuation additions qualifier</WCOName>
+                                      <SADBox>45</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="AmountAmount" type="ds:ValuationAdjustmentAmountAmountType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>125</WCOID>
+                                      <WCOName>Valuation adjustment</WCOName>
+                                      <SADBox>45</SADBox>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Invoice" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>78A</WCOID>
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="IssueDateTime" type="ds:InvoiceIssueDateTimeType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>D015</WCOID>
+                                <WCOName>Invoice date</WCOName>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="ID" type="ds:InvoiceIdentificationIDType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>D016</WCOID>
+                                <WCOName>Invoice number</WCOName>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Payer" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>56B</WCOID>
+                        </xs:documentation>
+                        <xs:documentation>
+                          <SADBox>9</SADBox>
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Name" type="ds:PayerNameTextType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>R120</WCOID>
+                                <WCOName>Payer</WCOName>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="ID" type="ds:PayerIdentificationIDType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>R121</WCOID>
+                                <WCOName>Payer, coded</WCOName>
+                              </xs:documentation>
+                              <xs:documentation>
+                                <SADBox>9</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Address" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>04A</WCOID>
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="CityName" type="ds:AddressCityNameTextType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>241</WCOID>
+                                      <WCOName>City name</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="CountryCode" type="ds:AddressCountryCodeType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>242</WCOID>
+                                      <WCOName>Country, coded</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="Line" type="ds:AddressLineTextType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>239</WCOID>
+                                      <WCOName>Street and number/P.O. Box</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="PostcodeID" type="ds:AddressPostcodeIDType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>245</WCOID>
+                                      <WCOName>Postcode identification</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Seller" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>09B</WCOID>
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Name" type="ds:SellerNameTextType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>R050</WCOID>
+                                <WCOName>Seller - name</WCOName>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="ID" type="ds:SellerIdentificationIDType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>R051</WCOID>
+                                <WCOName>Seller, coded</WCOName>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Address" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>04A</WCOID>
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="CityName" type="ds:AddressCityNameTextType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>241</WCOID>
+                                      <WCOName>City name</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="CountryCode" type="ds:AddressCountryCodeType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>242</WCOID>
+                                      <WCOName>Country, coded</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="Line" type="ds:AddressLineTextType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>239</WCOID>
+                                      <WCOName>Street and number/P.O. Box</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="PostcodeID" type="ds:AddressPostcodeIDType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>245</WCOID>
+                                      <WCOName>Postcode identification</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Surety" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>19B</WCOID>
+                        </xs:documentation>
+                        <xs:documentation>
+                          <SADBox>9</SADBox>
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Name" type="ds:SuretyNameTextType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>R054</WCOID>
+                                <WCOName>Surety Name and Address</WCOName>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="ID" type="ds:SuretyIdentificationIDType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>R055</WCOID>
+                                <WCOName>Surety, coded</WCOName>
+                              </xs:documentation>
+                              <xs:documentation>
+                                <SADBox>9</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Address" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>04A</WCOID>
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="CityName" type="ds:AddressCityNameTextType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>241</WCOID>
+                                      <WCOName>City name</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="CountryCode" type="ds:AddressCountryCodeType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>242</WCOID>
+                                      <WCOName>Country, coded</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="Line" type="ds:AddressLineTextType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>239</WCOID>
+                                      <WCOName>Street and number/P.O. Box</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="PostcodeID" type="ds:AddressPostcodeIDType" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="EN">
+                                      <WCOID>245</WCOID>
+                                      <WCOName>Postcode identification</WCOName>
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="TradeTerms" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>22B</WCOID>
+                        </xs:documentation>
+                        <xs:documentation>
+                          <SADBox>20</SADBox>
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ConditionCode" type="ds:TradeTermsConditionCodeType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>090</WCOID>
+                                <WCOName>INCOTERMS, coded</WCOName>
+                              </xs:documentation>
+                              <xs:documentation>
+                                <SADBox>20</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="CountryRelationshipCode" type="ds:TradeTermsCountryRelationshipCodeType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>106</WCOID>
+                                <WCOName>Country relationship, coded</WCOName>
+                              </xs:documentation>
+                              <xs:documentation>
+                                <SADBox>20</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Description" type="ds:TradeTermsDescriptionTextType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>089</WCOID>
+                                <WCOName>INCOTERMS</WCOName>
+                              </xs:documentation>
+                              <xs:documentation>
+                                <SADBox>20</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="LocationID" type="ds:TradeTermsLocationIDType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>L002</WCOID>
+                                <WCOName>INCOTERMS place, coded</WCOName>
+                              </xs:documentation>
+                              <xs:documentation>
+                                <SADBox>20</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="LocationName" type="ds:TradeTermsLocationNameTextType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>L001</WCOID>
+                                <WCOName>INCOTERMS place</WCOName>
+                              </xs:documentation>
+                              <xs:documentation>
+                                <SADBox>20</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="UCR" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>35B</WCOID>
+                        </xs:documentation>
+                        <xs:documentation>
+                          <SADBox>7</SADBox>
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ID" type="ds:UCRIdentificationIDType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>016</WCOID>
+                                <WCOName>Unique consignment reference number</WCOName>
+                                <SADBox>7</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="TraderAssignedReferenceID" type="ds:UCRTraderAssignedReferenceIDType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>009</WCOID>
+                                <WCOName>Trader reference</WCOName>
+                                <SADBox>7</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Warehouse" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>43B</WCOID>
+                        </xs:documentation>
+                        <xs:documentation>
+                          <SADBox>49</SADBox>
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ID" type="ds:WarehouseIdentificationIDType">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>L019</WCOID>
+                                <WCOName>Warehouse, coded</WCOName>
+                                <SADBox>49</SADBox>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Importer" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation xml:lang="EN">
+                    <WCOID>74A</WCOID>
+                  </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Name" type="ds:ImporterNameTextType" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>R037</WCOID>
+                          <WCOName>Importer - name</WCOName>
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="ID" type="ds:ImporterIdentificationIDType" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>R038</WCOID>
+                          <WCOName>Importer, coded</WCOName>
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="Address" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation xml:lang="EN">
+                          <WCOID>04A</WCOID>
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="CityName" type="ds:AddressCityNameTextType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>241</WCOID>
+                                <WCOName>City name</WCOName>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="CountryCode" type="ds:AddressCountryCodeType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>242</WCOID>
+                                <WCOName>Country, coded</WCOName>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="Line" type="ds:AddressLineTextType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>239</WCOID>
+                                <WCOName>Street and number/P.O. Box</WCOName>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="PostcodeID" type="ds:AddressPostcodeIDType" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="EN">
+                                <WCOID>245</WCOID>
+                                <WCOName>Postcode identification</WCOName>
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
